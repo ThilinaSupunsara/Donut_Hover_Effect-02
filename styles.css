@@ -1,0 +1,108 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+.container {
+    position: relative;
+}
+
+.donut {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cec17a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.donut:hover {
+    width: 145px;
+    height: 145px;
+}
+
+.center {
+    background-color: #fff8f8;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.ok {
+    background-color: #ffb800;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    transition: transform 0.9s ease;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+.donut:hover .text {
+    opacity: 1;
+}
+
+.donut:hover .ok {
+    transform: rotate(360deg);
+    transition: transform 0s ease;
+}
+
+.text.first {
+    transform: rotate(45deg) translate(50px) rotate(90deg);
+    transition: transform 0.9s ease;
+}
+
+.text.second {
+    transform: rotate(135deg) translate(50px) rotate(90deg);
+    transition: transform 0.9s ease;
+}
+
+.text.third {
+    transform: rotate(-135deg) translate(50px) rotate(90deg);
+    transition: transform 0.9s ease;
+}
+
+.text.fourth {
+    transform: rotate(-45deg) translate(50px) rotate(90deg);
+    transition: transform 0.9s ease;
+}
+
+.donut:hover .text.first {
+    transform: rotate(45deg) translate(50px) rotate(90deg) rotate(360deg);
+}
+
+.donut:hover .text.second {
+    transform: rotate(135deg) translate(50px) rotate(90deg) rotate(360deg);
+}
+
+.donut:hover .text.third {
+    transform: rotate(-135deg) translate(50px) rotate(90deg) rotate(360deg);
+}
+
+.donut:hover .text.fourth {
+    transform: rotate(-45deg) translate(50px) rotate(90deg) rotate(360deg);
+}
